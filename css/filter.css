@@ -1,0 +1,24 @@
+.filters {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: nowrap; /* Don't wrap to next line */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  -webkit-overflow-scrolling: touch; /* Smooth scroll on iOS */
+  gap: 8px; /* Optional spacing between buttons */
+
+  scroll-behavior: smooth;
+}
+.filters::-webkit-scrollbar {
+  display: none;
+}
+.filter-btn {
+  padding: 6px 10px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+  color: #333;
+  white-space: nowrap; /* Prevent text from wrapping */
+}

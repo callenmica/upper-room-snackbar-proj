@@ -1,0 +1,131 @@
+.sidebar {
+  position: fixed;
+  width: 140px;
+  height: 100%;
+  background-color: white;
+  z-index: 1200;
+  right: -170px;
+  top: 0;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  transition: right 0.3s ease;
+  border-left: #b5b5b5 1px solid;
+}
+.sidebar.show {
+  right: 0;
+}
+.sidebar-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex: 1;
+  border-bottom: #b5b5b5 1px solid;
+  padding-left: 10px;
+  padding-bottom: 30px;
+}
+.sidebar-close-btn {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-bottom: 35px;
+}
+.sidebar-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #333;
+}
+.sidebar-description {
+  font-size: 14px;
+  color: #a5a5a5;
+}
+
+.sidebar-middle {
+  flex: 2.5;
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 20px 0;
+  border-bottom: #b5b5b5 1px solid;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+/* .sidebar-middle::-webkit-scrollbar {
+  display: none;
+} */
+.item-order-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.sidebar-item-image {
+  width: 80px;
+  height: auto;
+  border-radius: 10px;
+}
+.sidebar-item-name {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 0 5px;
+  color: #333;
+  text-align: center;
+}
+.sidebar-item-price {
+  font-size: 12px;
+  font-weight: 400;
+  color: #6e6e6e;
+  text-align: center;
+}
+.sidebar-item-quantity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.quantity-btn-minus {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 5px 12px;
+}
+
+.quantity-btn-plus {
+  color: white;
+  background-color: #333;
+  border: 1px solid #333;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 5px 12px;
+}
+
+.sidebar-bottom {
+  flex: 1;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+}
+.total-label {
+  font-size: 14px;
+  color: #a5a5a5;
+  margin-bottom: 10px;
+}
+.total-price {
+  font-size: 18px;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.done-button {
+  background-color: #333;
+  color: white;
+  padding: 35px 30px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}

@@ -1,0 +1,51 @@
+.header {
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header-title {
+  font-size: 30px;
+  font-weight: 800;
+  color: #333;
+}
+.cart-button {
+  display: flex;
+  align-items: center;
+  padding: 9px 12px;
+  background-color: #f5f5f5;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: all 0.5s;
+}
+.cart-button.active {
+  background: #333;
+  color: #fff;
+}
+.cart-button.active .cart-count {
+  color: #fff;
+}
+.cart-button.active img {
+  filter: brightness(0) invert(1); /* Makes icon white if it's a dark SVG */
+}
+.cart-icon {
+  width: 21px;
+  height: 21px;
+  margin-right: 11px;
+}
+.cart-count {
+  color: black;
+  font-size: 14px;
+  width: 16px;
+  text-align: center;
+}

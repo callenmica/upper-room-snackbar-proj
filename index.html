@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>snack bar</title>
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/search-bar.css" />
+    <link rel="stylesheet" href="css/filter.css" />
+    <link rel="stylesheet" href="css/items.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <p class="header-title">upper room.</p>
+      <button class="cart-button" id="cart-button">
+        <img class="cart-icon" src="images/icons/cart.svg" alt="" />
+        <span class="cart-count">0</span>
+      </button>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <img src="images/icons/close.svg" class="sidebar-close-btn" />
+        <p class="sidebar-title">My<br />Order</p>
+        <p class="sidebar-description">snack bar</p>
+      </div>
+      <div class="sidebar-middle">
+        <div class="item-order-container">
+          <img
+            src="images/items/maggi-tom-yum.jpeg"
+            class="sidebar-item-image"
+          />
+          <p class="sidebar-item-name">Maggi Hot Cup TomYam</p>
+          <p class="sidebar-item-price">RM 5.00</p>
+          <div class="sidebar-item-quantity">
+            <button class="quantity-btn-minus">-</button>
+            <p class="quantity-number">1</p>
+            <button class="quantity-btn-plus">+</button>
+          </div>
+        </div>
+
+        <div class="item-order-container">
+          <img
+            src="images/items/calpis-strawberry.webp"
+            class="sidebar-item-image"
+          />
+          <p class="sidebar-item-name">Calpis Strawberry</p>
+          <p class="sidebar-item-price">RM 4.7 0</p>
+          <div class="sidebar-item-quantity">
+            <button class="quantity-btn-minus">-</button>
+            <p class="quantity-number">1</p>
+            <button class="quantity-btn-plus">+</button>
+          </div>
+        </div>
+
+        <div class="item-order-container">
+          <img
+            src="images/items/lays-classic.webp"
+            class="sidebar-item-image"
+          />
+          <p class="sidebar-item-name">Lays Classic</p>
+          <p class="sidebar-item-price">RM 12.00</p>
+          <div class="sidebar-item-quantity">
+            <button class="quantity-btn-minus">-</button>
+            <p class="quantity-number">1</p>
+            <button class="quantity-btn-plus">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar-bottom">
+        <p class="total-label">Total</p>
+        <p class="total-price">RM 13.00</p>
+        <button class="done-button">Done</button>
+      </div>
+    </div>
+    <div class="main">
+      <div class="title">
+        <p><span class="bold-text">Hey,</span><br />whachu get?</p>
+      </div>
+      <div class="search-bar">
+        <input
+          type="text"
+          placeholder="search for an item."
+          class="search-input"
+        />
+        <button class="search-button">
+          <img src="images/icons/search.svg" alt="search-button" />
+        </button>
+      </div>
+
+      <div class="filters">
+        <button class="filter-btn">All</button>
+        <button class="filter-btn" onclick="scrollToSection('InstantNoodles')">
+          Instant Noodles
+        </button>
+        <button class="filter-btn" onclick="scrollToSection('Beverages')">
+          Beverages
+        </button>
+        <button class="filter-btn" onclick="scrollToSection('Chips')">
+          Chips
+        </button>
+        <button class="filter-btn" onclick="scrollToSection('Candy')">
+          Candy
+        </button>
+        <button class="filter-btn" onclick="scrollToSection('Biscuits')">
+          Biscuit
+        </button>
+      </div>
+
+      <div class="item-category-container">
+        <div class="item-category" id="InstantNoodles">
+          <p class="category-title">Instant Noodles</p>
+          <div class="item-container">
+            <div class="item-card">
+              <div class="item-card-top">
+                <img src="images/items/maggi-tom-yum.jpeg" />
+                <button class="add-to-cart-btn">
+                  <img src="images/icons/add.svg" alt="" />
+                </button>
+              </div>
+              <div class="item-card-bottom">
+                <p class="item-price">RM 5.00</p>
+                <p class="item-name">Maggi Hot Cup TomYam</p>
+                <p class="item-info">66g</p>
+              </div>
+            </div>
+
+            <div class="item-card">
+              <div class="item-card-top">
+                <img src="images/items/maggi-tom-yum.jpeg" />
+                <button class="add-to-cart-btn">
+                  <img src="images/icons/add.svg" alt="" />
+                </button>
+              </div>
+              <div class="item-card-bottom">
+                <p class="item-price">RM 5.00</p>
+                <p class="item-name">Maggi Hot Cup TomYam</p>
+                <p class="item-info">66g</p>
+              </div>
+            </div>
+
+            <div class="item-card">
+              <div class="item-card-top">
+                <img src="images/items/maggi-tom-yum.jpeg" />
+                <button class="add-to-cart-btn">
+                  <img src="images/icons/add.svg" alt="" />
+                </button>
+              </div>
+              <div class="item-card-bottom">
+                <p class="item-price">RM 5.00</p>
+                <p class="item-name">Maggi Hot Cup TomYam</p>
+                <p class="item-info">66g</p>
+              </div>
+            </div>
+
+            <div class="item-card">
+              <div class="item-card-top">
+                <img src="images/items/maggi-tom-yum.jpeg" />
+                <button class="add-to-cart-btn">
+                  <img src="images/icons/add.svg" alt="" />
+                </button>
+              </div>
+              <div class="item-card-bottom">
+                <p class="item-price">RM 5.00</p>
+                <p class="item-name">Maggi Hot Cup TomYam</p>
+                <p class="item-info">66g</p>
+              </div>
+            </div>
+
+            <div class="item-card">
+              <div class="item-card-top">
+                <img src="images/items/maggi-tom-yum.jpeg" />
+                <button class="add-to-cart-btn">
+                  <img src="images/icons/add.svg" alt="" />
+                </button>
+              </div>
+              <div class="item-card-bottom">
+                <p class="item-price">RM 5.00</p>
+                <p class="item-name">Maggi Hot Cup TomYam</p>
+                <p class="item-info">66g</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item-category" id="Beverages">
+          <p class="category-title">Beverages</p>
+          <div class="item-container">
+            <div class="item-card">
+              <div class="item-card-top">
+                <img src="images/items/calpis-strawberry.webp" />
+                <button class="add-to-cart-btn">
+                  <img src="images/icons/add.svg" alt="" />
+                </button>
+              </div>
+              <div class="item-card-bottom">
+                <p class="item-price">RM 4.70</p>
+                <p class="item-name">Calpis Strawberry</p>
+                <p class="item-info">350ml</p>
+              </div>
+            </div>
+
+            <div class="item-card">
+              <div class="item-card-top">
+                <img src="images/items/calpis-strawberry.webp" />
+                <button class="add-to-cart-btn">
+                  <img src="images/icons/add.svg" alt="" />
+                </button>
+              </div>
+              <div class="item-card-bottom">
+                <p class="item-price">RM 4.70</p>
+                <p class="item-name">Calpis Strawberry</p>
+                <p class="item-info">350ml</p>
+              </div>
+            </div>
+
+            <div class="item-card">
+              <div class="item-card-top">
+                <img src="images/items/calpis-strawberry.webp" />
+                <button class="add-to-cart-btn">
+                  <img src="images/icons/add.svg" alt="" />
+                </button>
+              </div>
+              <div class="item-card-bottom">
+                <p class="item-price">RM 4.70</p>
+                <p class="item-name">Calpics Strawberry</p>
+                <p class="item-info">350ml</p>
+              </div>
+            </div>
+
+            <div class="item-card">
+              <div class="item-card-top">
+                <img src="images/items/calpis-strawberry.webp" />
+                <button class="add-to-cart-btn">
+                  <img src="images/icons/add.svg" alt="" />
+                </button>
+              </div>
+              <div class="item-card-bottom">
+                <p class="item-price">RM 4.70</p>
+                <p class="item-name">Calpis Strawberry</p>
+                <p class="item-info">350ml</p>
+              </div>
+            </div>
+
+            <div class="item-card">
+              <div class="item-card-top">
+                <img src="images/items/calpis-strawberry.webp" />
+                <button class="add-to-cart-btn">
+                  <img src="images/icons/add.svg" alt="" />
+                </button>
+              </div>
+              <div class="item-card-bottom">
+                <p class="item-price">RM 4.70</p>
+                <p class="item-name">Calpis Strawberry</p>
+                <p class="item-info">350ml</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item-category" id="Chips">
+          <p class="category-title">Chips</p>
+          <div class="item-container">
+            <div class="item-card">
+              <div class="item-card-top">
+                <img src="images/items/lays-classic.webp" />
+                <button class="add-to-cart-btn">
+                  <img src="images/icons/add.svg" alt="" />
+                </button>
+              </div>
+              <div class="item-card-bottom">
+                <p class="item-price">RM 12.00</p>
+                <p class="item-name">Lays Classic</p>
+                <p class="item-info">184g</p>
+              </div>
+            </div>
+
+            <div class="item-card">
+              <div class="item-card-top">
+                <img src="images/items/lays-classic.webp" />
+                <button class="add-to-cart-btn">
+                  <img src="images/icons/add.svg" alt="" />
+                </button>
+              </div>
+              <div class="item-card-bottom">
+                <p class="item-price">RM 12.00</p>
+                <p class="item-name">Lays Classic</p>
+                <p class="item-info">184g</p>
+              </div>
+            </div>
+
+            <div class="item-card">
+              <div class="item-card-top">
+                <img src="images/items/lays-classic.webp" />
+                <button class="add-to-cart-btn">
+                  <img src="images/icons/add.svg" alt="" />
+                </button>
+              </div>
+              <div class="item-card-bottom">
+                <p class="item-price">RM 12.00</p>
+                <p class="item-name">Lays Classic</p>
+                <p class="item-info">184g</p>
+              </div>
+            </div>
+
+            <div class="item-card">
+              <div class="item-card-top">
+                <img src="images/items/lays-classic.webp" />
+                <button class="add-to-cart-btn">
+                  <img src="images/icons/add.svg" alt="" />
+                </button>
+              </div>
+              <div class="item-card-bottom">
+                <p class="item-price">RM 12.00</p>
+                <p class="item-name">Lays Classic</p>
+                <p class="item-info">184g</p>
+              </div>
+            </div>
+
+            <div class="item-card">
+              <div class="item-card-top">
+                <img src="images/items/lays-classic.webp" />
+                <button class="add-to-cart-btn">
+                  <img src="images/icons/add.svg" alt="" />
+                </button>
+              </div>
+              <div class="item-card-bottom">
+                <p class="item-price">RM 12.00</p>
+                <p class="item-name">Lays Classic</p>
+                <p class="item-info">184g</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item-category" id="Candy">
+          <p class="category-title">Candy</p>
+          <div class="item-container">
+            <div class="item-card">
+              <div class="item-card-top">
+                <img src="images/items/m&ms.jpeg" />
+                <button class="add-to-cart-btn">
+                  <img src="images/icons/add.svg" alt="" />
+                </button>
+              </div>
+              <div class="item-card-bottom">
+                <p class="item-price">RM 3.00</p>
+                <p class="item-name">M&M's</p>
+                <p class="item-info">40g</p>
+              </div>
+            </div>
+
+            <div class="item-card">
+              <div class="item-card-top">
+                <img src="images/items/m&ms.jpeg" />
+                <button class="add-to-cart-btn">
+                  <img src="images/icons/add.svg" alt="" />
+                </button>
+              </div>
+              <div class="item-card-bottom">
+                <p class="item-price">RM 3.00</p>
+                <p class="item-name">M&M's</p>
+                <p class="item-info">40g</p>
+              </div>
+            </div>
+
+            <div class="item-card">
+              <div class="item-card-top">
+                <img src="images/items/m&ms.jpeg" />
+                <button class="add-to-cart-btn">
+                  <img src="images/icons/add.svg" alt="" />
+                </button>
+              </div>
+              <div class="item-card-bottom">
+                <p class="item-price">RM 3.00</p>
+                <p class="item-name">M&M's</p>
+                <p class="item-info">40g</p>
+              </div>
+            </div>
+
+            <div class="item-card">
+              <div class="item-card-top">
+                <img src="images/items/m&ms.jpeg" />
+                <button class="add-to-cart-btn">
+                  <img src="images/icons/add.svg" alt="" />
+                </button>
+              </div>
+              <div class="item-card-bottom">
+                <p class="item-price">RM 3.00</p>
+                <p class="item-name">M&M's</p>
+                <p class="item-info">40g</p>
+              </div>
+            </div>
+
+            <div class="item-card">
+              <div class="item-card-top">
+                <img src="images/items/m&ms.jpeg" />
+                <button class="add-to-cart-btn">
+                  <img src="images/icons/add.svg" alt="" />
+                </button>
+              </div>
+              <div class="item-card-bottom">
+                <p class="item-price">RM 3.00</p>
+                <p class="item-name">M&M's</p>
+                <p class="item-info">40g</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item-category" id="Biscuits">
+          <p class="category-title">Biscuits</p>
+          <div class="item-container">
+            <div class="item-card">
+              <div class="item-card-top">
+                <img src="images/items/tiger.jpeg" />
+                <button class="add-to-cart-btn">
+                  <img src="images/icons/add.svg" alt="" />
+                </button>
+              </div>
+              <div class="item-card-bottom">
+                <p class="item-price">RM 1.50</p>
+                <p class="item-name">Tiger Biscuit</p>
+                <p class="item-info">75g</p>
+              </div>
+            </div>
+
+            <div class="item-card">
+              <div class="item-card-top">
+                <img src="images/items/tiger.jpeg" />
+                <button class="add-to-cart-btn">
+                  <img src="images/icons/add.svg" alt="" />
+                </button>
+              </div>
+              <div class="item-card-bottom">
+                <p class="item-price">RM 1.50</p>
+                <p class="item-name">Tiger Biscuit</p>
+                <p class="item-info">75g</p>
+              </div>
+            </div>
+
+            <div class="item-card">
+              <div class="item-card-top">
+                <img src="images/items/tiger.jpeg" />
+                <button class="add-to-cart-btn">
+                  <img src="images/icons/add.svg" alt="" />
+                </button>
+              </div>
+              <div class="item-card-bottom">
+                <p class="item-price">RM 1.50</p>
+                <p class="item-name">Tiger Biscuit</p>
+                <p class="item-info">75g</p>
+              </div>
+            </div>
+
+            <div class="item-card">
+              <div class="item-card-top">
+                <img src="images/items/tiger.jpeg" />
+                <button class="add-to-cart-btn">
+                  <img src="images/icons/add.svg" alt="" />
+                </button>
+              </div>
+              <div class="item-card-bottom">
+                <p class="item-price">RM 1.50</p>
+                <p class="item-name">Tiger Biscuit</p>
+                <p class="item-info">75g</p>
+              </div>
+            </div>
+
+            <div class="item-card">
+              <div class="item-card-top">
+                <img src="images/items/tiger.jpeg" />
+                <button class="add-to-cart-btn">
+                  <img src="images/icons/add.svg" alt="" />
+                </button>
+              </div>
+              <div class="item-card-bottom">
+                <p class="item-price">RM 1.50</p>
+                <p class="item-name">Tiger Biscuit</p>
+                <p class="item-info">75g</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="frontend-scripts/events/filter-button.js"></script>
+    <script src="frontend-scripts/events/toggle-sidebar.js"></script>
+    <script src="frontend-scripts/ui/render-items.js"></script>
+    <script src="frontend-scripts/data/items.js"></script>
+    <script src="frontend-scripts/cart.js"></script>
+  </body>
+</html>
