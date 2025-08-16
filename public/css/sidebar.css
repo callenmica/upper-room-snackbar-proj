@@ -87,8 +87,14 @@
   background-color: white;
   border: 1px solid #ccc;
   border-radius: 10px;
-  cursor: pointer;
-  padding: 5px 12px;
+  padding: 5px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.quantity-btn-minus img {
+  width: 16px;
+  height: 16px;
 }
 
 .quantity-btn-plus {
@@ -96,10 +102,21 @@
   background-color: #333;
   border: 1px solid #333;
   border-radius: 10px;
-  cursor: pointer;
-  padding: 5px 12px;
+  padding: 5px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.quantity-btn-plus img {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) invert(1);
+}
+.quantity-number {
+  width: 16px;
+  text-align: center;
+}
 .sidebar-bottom {
   flex: 1;
   height: 100px;
